@@ -1,0 +1,186 @@
+/*
+1. Do nothing: YOU WILL BE PUNISHED ON THE GOOGLE SEARCH RANKINGS -> MEDIA QUERIES
+
+2. Make a sepereate mobile site m.facebook.com (two much work)
+
+3. Make it responsive (for all devices)
+Using media queries breakpoint are a popular technique for delivering a tailored style
+sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.
+*/
+/* FOR RESPONSIVE DESIGN --> EITHER FROM DESKTOP TO MOBIEL OR VICE VERSA */
+/* ------------------------ TAG SECTION ------------------------ */
+body {
+  font-family: 'Montserrat';
+}
+
+/* a typeface (schrift) have different styles (italic, Black) */
+/* think about what the user should focus at
+at the moment this h1 is competing with the brand name (and this is not good) */
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: "Montserrat";
+  color: #8f8f8f;
+  /* access different weights for different implemented fonts!! */
+  font-weight: 300;
+}
+
+/* ID SECTION  */
+#title {
+  /* encompassing (umfassen) */
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+#features {
+  padding: 7% 15%;
+  /* in order to make sure that it is not transparent at all ()
+  So if it does sit on top of another element it will obscure (verdunkeln) it */
+  background-color: #fff;
+  position: relative;
+  /* positioned elementer that come later in the html flow are on top
+   even if they dont have a z-index;
+In this case feature comes later than title image
+   */
+}
+
+/* TESTIMONIAL SECTION */
+#testimonials {
+  text-align: center;
+  /* to seperate sections from eachother */
+  background-color: #ef8172;
+  color: #FFF;
+}
+
+/* press section - group with testimonial section */
+#press {
+  background-color: #ef8172;
+  text-align: center;
+  /* lifting the elements up  */
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
+/* PRICES SECTION */
+#pricing {
+  text-align: center;
+  padding: 100px;
+}
+
+/* ------------------------ CLASS SECTION ------------------------ */
+.navbar-brand {
+  font-family: 'Ubuntu';
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* nav bar: higher level div --> selectors less specific  */
+/* when designing web sites or appes --> minimize the number of lines that you can align
+things to, --> design look more together */
+.navbar {
+  margin-bottom: 4.5rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+  /* light */
+  font-weight: 300
+}
+
+/* download buttons */
+.download-button {
+  margin: 5% 3% 5% 0
+}
+
+/* TITLE SECTION? */
+/* squezzing the content */
+.container-fluid {
+  padding: 3% 15% 7%;
+}
+
+/* transfrom property applies a 2D or 3D transformation to an element. This property
+allows: rotate, scale, move, skew (verzerren) etc. elements. */
+.title-image {
+  width: 60%;
+  position: absolute;
+  right: 30%;
+  transform: rotate(25deg);
+}
+
+/* FEATURES SECTION  */
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
+
+/* TESTIMONIAL SECTION FOR CLASS SELECTORS */
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* delimit only the carousel items to the buttons (controls) to slide back or forward */
+.carousel-item {
+  padding: 7% 15%;
+}
+
+/* PRESS SECTION  */
+.press-logo {
+  /* FOR THE VISUAL HIERACHY */
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* ACCESS ALL pricing-column  */
+.pricing-column {
+  padding: 3% 2%
+}
+
+.title-column2 {
+  position: relative;
+}
+
+/* MEDIA QUERIES: - viewport width */
+/* for fine tuning and for really narrowing down on the exact design you want for mobile, tablet and laptop */
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    transform: rotate(0);
+    position: static;
+  }
+}
