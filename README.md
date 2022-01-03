@@ -1,2 +1,1 @@
-# Tindog
-Responsive Website as Udemy course project. 
+TinDog Starting Files
