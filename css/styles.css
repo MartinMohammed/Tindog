@@ -84,6 +84,20 @@ In this case feature comes later than title image
   padding: 100px;
 }
 
+/* CALL TO ACTION SECTION */
+#cta {
+  text-align: center;
+  background-color: #ff4c68;
+  padding: 7% 15%;
+  color: #fff;
+}
+
+/* FOOTER SECTION */
+#footer {
+  padding: 7% 15%;
+  text-align: center;
+}
+
 /* ------------------------ CLASS SECTION ------------------------ */
 .navbar-brand {
   font-family: 'Ubuntu';
@@ -170,6 +184,27 @@ allows: rotate, scale, move, skew (verzerren) etc. elements. */
 
 .title-column2 {
   position: relative;
+}
+
+/* CTA SECTION */
+.cta-heading {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 3.5rem;
+  /* 1.5 times no unit */
+  line-height: 1.5;
+}
+
+.social-icon {
+  margin: 20px 15px;
+  text-decoration: none;
+  color: #000;
+  /* pointer is the hand (they are different cursor types) */
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  font-size: 2rem;
 }
 
 /* MEDIA QUERIES: - viewport width */

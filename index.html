@@ -32,7 +32,7 @@
     <!-- types of bootstrap container
 1. default container -> sets max-width at each responsive breakpoint
 2. container-fluid ==> which is width 100% at all breakpoints
-3. container-{breakpoint}, which is widht: 100% until the specified breakpoint
+3. container-{breakpoint}, which is width: 100% until the specified breakpoint
 -->
     <div class="container-fluid">
 
@@ -55,13 +55,15 @@
             <!-- navigation items -->
             <li class="nav-item">
               <!-- href = hypertext Reference  create link to another page -->
-              <a class="nav-link" href="">Contact</a>
+
+              <!-- we can target section by id [unique](not url, and not a page) -->
+              <a class="nav-link" href="#footer">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Pricing</a>
+              <a class="nav-link" href="#pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Download</a>
+              <a class="nav-link" href="#cta">Download</a>
             </li>
           </ul>
         </div>
@@ -261,9 +263,9 @@
   <!-- Call to Action -->
 
   <section id="cta">
-    <h3>Find the True Love of Your Dog's Life Today.</h3>
-    <button type="button" class="btn btn-dark">Dark</button>
-    <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+    <h3 class="cta-heading">Find the True Love of Your Dog's Life Today.</h3>
+    <button type="button" class="download-button btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+    <button type="button" class="download-button btn btn-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
 
   </section>
 
@@ -271,7 +273,15 @@
   <!-- Footer -->
 
   <footer id="footer">
+    <!-- anchor tag in html is used to create a hyperlink on the webpage
+    a hyperlink is ues to link the webpage to other web pages (absolute [FULL URL?]
+    reference or relative reference (href)) -->
+    <!--href = hypertext references -->
 
+    <a class="social-icon fab fa-twitter" href="https://twitter.com/MartinMohammed9"></a>
+    <a class="social-icon fab fa-linkedin-in" href="https://linkedin.com/in/martin-mohammed-30019a207"></a>
+    <a class="social-icon fas fa-phone" href="tel:+491794552891"></a>
+    <a class="social-icon fas fa-envelope" href="mailto:martinbusiness04@gmail.com"></a>
     <p>© Copyright TinDog</p>
 
   </footer>
