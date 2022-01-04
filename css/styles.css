@@ -9,31 +9,27 @@ sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.
 */
 /* FOR RESPONSIVE DESIGN --> EITHER FROM DESKTOP TO MOBIEL OR VICE VERSA */
 /* ------------------------ TAG SECTION ------------------------ */
-/* KEY IN PROGRAMMING IS DRY = DONT REPEAT YOURSELF */
+/* KEY IN PROGRAMMING IS DRY = DONT REPEAT YOURSELF
+HOW TO - priority:
+1. Readbility
+2. Modularity - how easy it is to reuse the code (and how easy it is
+    to narrow down the problem in case)
+3. Efficiency - fast code
+4. Length
+ */
+/* broad tags --> broad styling */
 body {
   font-family: 'Montserrat';
+  text-align: center;
 }
 
 /* a typeface (schrift) have different styles (italic, Black) */
 /* think about what the user should focus at
 at the moment this h1 is competing with the brand name (and this is not good) */
-h1 {
-  font-size: 3.5rem;
-  line-height: 1.5;
-  font-weight: 900;
-}
-
-h2 {
+/* multiple selectors */
+h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat";
   font-weight: 900;
-  font-size: 3rem;
-  line-height: 1.5;
-}
-
-h3 {
-  font-family: "Montserrat";
-  font-weight: bold;
-  font-size: 1.5rem;
 }
 
 p {
@@ -44,17 +40,22 @@ p {
 }
 
 /* ID SECTION  */
-#title {
+/* TITLE SECTION */
+/* decrease the padding of container-flud in the title section  == combining selectors */
+/* CALLED HIERACHICAL SELECTORS */
+#title .container-fluid {
+  /* it is easier to specify one tag and remove all unneccessary than else */
+  padding-top: 3%;
   /* encompassing (umfassen) */
-  background-color: #ff4c68;
-  color: #fff;
+  text-align: left;
 }
 
+/* COMBINED SELECTORS (AND)
+div.container-fluid {color: red;} -> all divs where the class is container-flud red
+ */
 #features {
-  padding: 7% 15%;
   /* in order to make sure that it is not transparent at all ()
   So if it does sit on top of another element it will obscure (verdunkeln) it */
-  background-color: #fff;
   position: relative;
   /* positioned elementer that come later in the html flow are on top
    even if they dont have a z-index;
@@ -63,17 +64,17 @@ In this case feature comes later than title image
 }
 
 /* TESTIMONIAL SECTION */
+/* hierachy -> id, classes, tags, inline css */
+/* FOR BEST PRACTICE: TRY ONLE ONE CUSTOM CLASS FOR A TAG AND NO INLINE CSS */
 #testimonials {
-  text-align: center;
   /* to seperate sections from eachother */
+  /* BACKGROUND COLOR GETS OVERRIDE */
   background-color: #ef8172;
-  color: #FFF;
 }
 
 /* press section - group with testimonial section */
 #press {
   background-color: #ef8172;
-  text-align: center;
   /* lifting the elements up  */
   padding-bottom: 3%;
   padding-top: 3%;
@@ -81,24 +82,10 @@ In this case feature comes later than title image
 
 /* PRICES SECTION */
 #pricing {
-  text-align: center;
   padding: 100px;
 }
 
-/* CALL TO ACTION SECTION */
-#cta {
-  text-align: center;
-  background-color: #ff4c68;
-  padding: 7% 15%;
-  color: #fff;
-}
-
 /* FOOTER SECTION */
-#footer {
-  padding: 7% 15%;
-  text-align: center;
-}
-
 /* ------------------------ CLASS SECTION ------------------------ */
 .navbar-brand {
   font-family: 'Ubuntu';
@@ -124,15 +111,38 @@ things to, --> design look more together */
   font-weight: 300
 }
 
+/* HEADING SECTION */
+.big-heading {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
 /* download buttons */
 .download-button {
   margin: 5% 3% 5% 0
 }
 
 /* TITLE SECTION? */
-/* squezzing the content */
+/* squezzing the content for reuse */
 .container-fluid {
-  padding: 3% 15% 7%;
+  padding: 7% 15%;
+}
+
+/* SECTIONS */
+/* common patterns in the website */
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
 }
 
 /* transfrom property applies a 2D or 3D transformation to an element. This property
@@ -145,8 +155,11 @@ allows: rotate, scale, move, skew (verzerren) etc. elements. */
 }
 
 /* FEATURES SECTION  */
+.feature-title {
+  font-size: 1.5rem;
+}
+
 .feature-box {
-  text-align: center;
   padding: 5%;
 }
 
@@ -160,6 +173,11 @@ allows: rotate, scale, move, skew (verzerren) etc. elements. */
 }
 
 /* TESTIMONIAL SECTION FOR CLASS SELECTORS */
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
 .testimonial-image {
   width: 10%;
   border-radius: 100%;
@@ -167,15 +185,17 @@ allows: rotate, scale, move, skew (verzerren) etc. elements. */
 }
 
 /* delimit only the carousel items to the buttons (controls) to slide back or forward */
-.carousel-item {
-  padding: 7% 15%;
-}
-
 /* PRESS SECTION  */
 .press-logo {
   /* FOR THE VISUAL HIERACHY */
   width: 15%;
   margin: 20px 20px 50px;
+}
+
+/* PRICING SECTION */
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
 }
 
 /* ACCESS ALL pricing-column  */
@@ -185,15 +205,6 @@ allows: rotate, scale, move, skew (verzerren) etc. elements. */
 
 .title-column2 {
   position: relative;
-}
-
-/* CTA SECTION */
-.cta-heading {
-  font-family: "Montserrat";
-  font-weight: bold;
-  font-size: 3.5rem;
-  /* 1.5 times no unit */
-  line-height: 1.5;
 }
 
 .social-icon {
